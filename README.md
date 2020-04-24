@@ -27,4 +27,10 @@ The Number of users contributes to the LFO Frequenny of the Flanger that is adde
 #### Main
 #### Satellite
 ```JSONOBject incoming``` receives all incoming messages sent by the main, formatted in JSON file.
-```int availableBeats``` gives back the amount of beats that are available for the specific user.
+
+```JSONArray points``` the positions of all IP Adresses connected.
+
+```int availableBeats``` the amount of beats that are available for the specific user.
+
+```int connectedNodes```  the amount of Users connected to the main.
+
