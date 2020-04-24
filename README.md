@@ -19,7 +19,12 @@ The Delay measures the duration of a ping that is sent to all users one after ea
 #### Weather Data
 Based on the Ip Adress, WeatherData is fetched over an WeatherAPI. By default the sum of the windspeed parameter of all users is taken to calculate the filter frequency.
 #### CommonSpace
-The average Distance between all IP Adresses of all useres creates a Parameter 
-
+The average Distance between all IP Adresses of all useres creates a Parameter that controls the volume of a Sample, which loops endlessly thorugh.
 #### UserCount
 The Number of users contributes to the LFO Frequenny of the Flanger that is added to a Sample, which loops endlessly thorugh.
+
+### Architecture
+#### Main
+#### Satellite
+```JSONOBject incoming``` receives all incoming messages sent by the main, formatted in JSON file.
+```int availableBeats``` gives back the amount of beats that are available for the specific user.
