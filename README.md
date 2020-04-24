@@ -23,14 +23,30 @@ The average Distance between all IP Adresses of all useres creates a Parameter t
 #### UserCount
 The Number of users contributes to the LFO Frequenny of the Flanger that is added to a Sample, which loops endlessly thorugh.
 
+### Instruments & Sounds
+The actual Sound setup consists of several loops,samples and effects that are routed as follows:
+
+```beatSampler```>```beatFilter```>```beatDelay```>```out```
+
+```singleSampler```>```singleSamplerGain```>```out```
+
+```ambient```>```ambientGain```>```ambientFilter```>```ambientFlanger```>```out```
+
+```loop1```>```loop1Gain```>```loop1tFilter```>```out```
+
+```loop3```>```loop1Gain```>```out```
+
+
+
 ### Architecture
 #### Main
+```ArrayList<Satellite> connected``` List of all Satellites connected
 #### Satellite
-```JSONOBject incoming``` receives all incoming messages sent by the main, formatted in JSON file.
+```JSONOBject incoming```   receives all incoming messages sent by the main, formatted in JSON file.
 
-```JSONArray points``` the positions of all IP Adresses connected.
+```JSONArray points```      the positions of all IP Adresses connected.
 
-```int availableBeats``` the amount of beats that are available for the specific user.
+```int availableBeats```    the amount of beats that are available for the specific user.
 
-```int connectedNodes```  the amount of Users connected to the main.
+```int connectedNodes```    the amount of Users connected to the main.
 
